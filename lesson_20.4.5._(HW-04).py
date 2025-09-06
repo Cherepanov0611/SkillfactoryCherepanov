@@ -70,13 +70,8 @@ else:
 
     print(f"Самый популярный день заказов: {most_popular_day} июля, (заказов: {max_count})")
 
-
-
 # Какой пользователь сделал самое большое количество заказов за июль?
-
-
 user_orders = {}
-
 
 for order_data in translator.values():
     # Проверка полей
@@ -102,10 +97,7 @@ top_users_sorted = sorted(top_users)
 
 print(f"Пользователь с наибольшим количеством заказов за июль: ID - {top_users_sorted[0]}, количество заказов: {max_orders}")
 
-
 #У какого пользователя самая большая суммарная стоимость заказов за июль?
-
-
 user_total_spent = {}
 
 # Перебор заказов
@@ -126,20 +118,11 @@ for order_data in translator.values():
             else:
                 user_total_spent[user_id] = price
 
-
 max_spent = max(user_total_spent.values())
-
 top_spenders = [user for user, total in user_total_spent.items() if total == max_spent]
-
 top_spenders_sorted = sorted(top_spenders)
-
-
 print(f"Пользователь с наибольшей стоимость заказов за июль: ID - {top_spenders_sorted[0]}, сумма заказов: {max_spent:.2f}")
-
-
-
 # Какая средняя стоимость заказа была в июле? Какая средняя стоимость товаров в июле?
-
 total_orders = 0          # Общее количество заказов
 total_price = 0.0         # Общая сумма всех заказов
 total_quantity = 0        # Общее количество товаров
